@@ -1,0 +1,65 @@
+/* ==========================================
+   SPLASH SCREEN - Premium Romantic
+   ========================================== */
+
+.splash-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(ellipse at 30% 40%, rgba(199, 107, 143, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 60%, rgba(212, 165, 116, 0.1) 0%, transparent 50%),
+    var(--night);
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: opacity 1.2s ease, visibility 1.2s ease;
+}
+
+.splash-overlay.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.splash-text {
+  font-family: 'Dancing Script', cursive;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  color: var(--blush);
+  animation: fadeInUp 1.5s ease-out;
+  text-shadow: 0 0 30px rgba(232, 160, 191, 0.3);
+}
+
+.splash-tap {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.3em;
+  color: rgba(232, 160, 191, 0.5);
+  margin-top: 2rem;
+  animation: fadeInUp 1.5s ease-out 0.5s both, glowPulseText 3s ease-in-out infinite 2s;
+}
+
+@keyframes glowPulseText {
+
+  0%,
+  100% {
+    text-shadow: 0 0 5px rgba(255, 143, 171, 0.2);
+  }
+
+  50% {
+    text-shadow: 0 0 20px rgba(255, 143, 171, 0.5);
+  }
+}
+
+.splash-heart-anim {
+  font-size: 5rem;
+  margin-bottom: 2rem;
+  animation: heartbeat 1.5s ease-in-out infinite;
+  display: inline-block;
+  filter: drop-shadow(0 0 40px rgba(255, 143, 171, 0.6));
+}

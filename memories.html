@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💕 Our Memories</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Quicksand:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/memories.css">
+    <link rel="stylesheet" href="css/effects.css">
+    <link rel="stylesheet" href="css/notes.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <style>
+        body {
+            padding-top: 50px;
+        }
+
+        .nav-back {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: var(--text-color);
+            text-decoration: none;
+            font-family: 'Quicksand', sans-serif;
+            font-size: 1.2rem;
+            z-index: 100;
+            background: rgba(43, 21, 33, 0.7);
+            padding: 10px 20px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 143, 171, 0.2);
+            backdrop-filter: blur(5px);
+            transition: 0.3s;
+        }
+
+        .nav-back:hover {
+            background: rgba(43, 21, 33, 0.9);
+            border-color: var(--primary-color);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- FLOATING HEARTS CONTAINER -->
+    <div class="floating-hearts" id="floatingHearts"></div>
+
+    <!-- MUSIC TOGGLE BUTTON -->
+    <button class="music-toggle" id="musicBtn" onclick="toggleMusic()" title="Toggle Music">
+        <div class="music-bars">
+            <div class="music-bar"></div>
+            <div class="music-bar"></div>
+            <div class="music-bar"></div>
+            <div class="music-bar"></div>
+        </div>
+    </button>
+
+    <a href="index.html" class="nav-back">← Back to Home</a>
+
+    <!-- ===== MEMORIES SLIDESHOW ===== -->
+    <section class="memories-section">
+        <div class="section-title" data-animate>Our Beautiful Memories</div>
+
+        <div class="slideshow-wrapper">
+            <button class="nav-btn btn-left" onclick="prevSlide()" title="Previous Memory">❮</button>
+
+            <div class="slideshow-container" id="memoriesSlideshow">
+
+                <!-- Slide 0 -->
+                <div class="slide active">
+                    <div class="memory-emoji" contenteditable="true" spellcheck="false">🌸</div>
+                    <div class="memory-date" contenteditable="true" spellcheck="false">The Beginning</div>
+                    <div class="memory-title" contenteditable="true" spellcheck="false">When We First Met</div>
+                    <div class="memory-text" contenteditable="true" spellcheck="false">The moment our eyes met, I knew
+                        something beautiful was about to begin. That first smile changed everything.</div>
+                    <div class="memory-placeholder-img">📸</div>
+                    <div class="slide-note-footer"><span class="save-status" id="saveStatus-0">Saved 💝</span></div>
+                </div>
+
+                <!-- Slide 1 -->
+                <div class="slide">
+                    <div class="memory-emoji" contenteditable="true" spellcheck="false">☕</div>
+                    <div class="memory-date" contenteditable="true" spellcheck="false">Our First Date</div>
+                    <div class="memory-title" contenteditable="true" spellcheck="false">Butterflies & Coffee</div>
+                    <div class="memory-text" contenteditable="true" spellcheck="false">Remember how nervous we both
+                        were?
+                        The coffee got cold because we couldn't stop talking. Hours felt like minutes.</div>
+                    <div class="memory-placeholder-img">📸</div>
+                    <div class="slide-note-footer"><span class="save-status" id="saveStatus-1">Saved 💝</span></div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="slide">
+                    <div class="memory-emoji" contenteditable="true" spellcheck="false">🎭</div>
+                    <div class="memory-date" contenteditable="true" spellcheck="false">Our Adventures</div>
+                    <div class="memory-title" contenteditable="true" spellcheck="false">Every Moment, A Treasure</div>
+                    <div class="memory-text" contenteditable="true" spellcheck="false">From silly late-night
+                        conversations
+                        to spontaneous adventures — every moment with you becomes my favorite memory.</div>
+                    <div class="memory-placeholder-img">📸</div>
+                    <div class="slide-note-footer"><span class="save-status" id="saveStatus-2">Saved 💝</span></div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="slide">
+                    <div class="memory-emoji" contenteditable="true" spellcheck="false">💫</div>
+                    <div class="memory-date" contenteditable="true" spellcheck="false">Today & Always</div>
+                    <div class="memory-title" contenteditable="true" spellcheck="false">Happy Anniversary, My Love</div>
+                    <div class="memory-text" contenteditable="true" spellcheck="false">Another year of us. Another year
+                        of
+                        love, laughter, and growing together. Here's to forever. 🥂</div>
+                    <div class="memory-placeholder-img">📸</div>
+                    <div class="slide-note-footer"><span class="save-status" id="saveStatus-3">Saved 💝</span></div>
+                </div>
+
+                <!-- Slide 4 -->
+                <div class="slide">
+                    <div class="memory-emoji" contenteditable="true" spellcheck="false">📷</div>
+                    <div class="memory-date" contenteditable="true" spellcheck="false">Another Special Day</div>
+                    <div class="memory-title" contenteditable="true" spellcheck="false">Title Goes Here</div>
+                    <div class="memory-text" contenteditable="true" spellcheck="false">Description goes here...</div>
+                    <div class="memory-placeholder-img">📸</div>
+                    <div class="slide-note-footer"><span class="save-status" id="saveStatus-4">Saved 💝</span></div>
+                </div>
+
+                <!-- Slide 5 -->
+                <div class="slide">
+                    <div class="memory-emoji" contenteditable="true" spellcheck="false">✨</div>
+                    <div class="memory-date" contenteditable="true" spellcheck="false">Your New Memory</div>
+                    <div class="memory-title" contenteditable="true" spellcheck="false">Title Goes Here</div>
+                    <div class="memory-text" contenteditable="true" spellcheck="false">Description goes here...</div>
+                    <div class="memory-placeholder-img">📸</div>
+                    <div class="slide-note-footer"><span class="save-status" id="saveStatus-5">Saved 💝</span></div>
+                </div>
+
+                <!-- Slide 6 -->
+                <div class="slide">
+                    <div class="memory-emoji" contenteditable="true" spellcheck="false">💖</div>
+                    <div class="memory-date" contenteditable="true" spellcheck="false">Your New Memory</div>
+                    <div class="memory-title" contenteditable="true" spellcheck="false">Title Goes Here</div>
+                    <div class="memory-text" contenteditable="true" spellcheck="false">Description goes here...</div>
+                    <div class="memory-placeholder-img">📸</div>
+                    <div class="slide-note-footer"><span class="save-status" id="saveStatus-6">Saved 💝</span></div>
+                </div>
+
+                <!-- Slide 7 -->
+                <div class="slide">
+                    <div class="memory-emoji" contenteditable="true" spellcheck="false">🌟</div>
+                    <div class="memory-date" contenteditable="true" spellcheck="false">Your New Memory</div>
+                    <div class="memory-title" contenteditable="true" spellcheck="false">Title Goes Here</div>
+                    <div class="memory-text" contenteditable="true" spellcheck="false">Description goes here...</div>
+                    <div class="memory-placeholder-img">📸</div>
+                    <div class="slide-note-footer"><span class="save-status" id="saveStatus-7">Saved 💝</span></div>
+                </div>
+
+                <!-- Slide 8 -->
+                <div class="slide">
+                    <div class="memory-emoji" contenteditable="true" spellcheck="false">🎀</div>
+                    <div class="memory-date" contenteditable="true" spellcheck="false">Your New Memory</div>
+                    <div class="memory-title" contenteditable="true" spellcheck="false">Title Goes Here</div>
+                    <div class="memory-text" contenteditable="true" spellcheck="false">Description goes here...</div>
+                    <div class="memory-placeholder-img">📸</div>
+                    <div class="slide-note-footer"><span class="save-status" id="saveStatus-8">Saved 💝</span></div>
+                </div>
+
+                <!-- Slide 9 -->
+                <div class="slide">
+                    <div class="memory-emoji" contenteditable="true" spellcheck="false">💌</div>
+                    <div class="memory-date" contenteditable="true" spellcheck="false">Your New Memory</div>
+                    <div class="memory-title" contenteditable="true" spellcheck="false">Title Goes Here</div>
+                    <div class="memory-text" contenteditable="true" spellcheck="false">Description goes here...</div>
+                    <div class="memory-placeholder-img">📸</div>
+                    <div class="slide-note-footer"><span class="save-status" id="saveStatus-9">Saved 💝</span></div>
+                </div>
+
+            </div>
+
+            <button class="nav-btn btn-right" onclick="nextSlide()" title="Next Memory">❯</button>
+        </div>
+
+        <div class="dots-wrapper">
+            <div class="dots" id="slideDots">
+                <!-- Dots are generated automatically by JavaScript (slideshow.js) -->
+            </div>
+        </div>
+
+        <!-- Hidden File Input for Live Photo Uploads -->
+        <input type="file" id="photoUploadInput" accept="image/*" style="display: none;">
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <section class="footer">
+        <div class="footer-heart">💖</div>
+        <div class="footer-text">Here's to forever, my love</div>
+        <div class="footer-sub">made with love, just for you</div>
+    </section>
+
+    <!-- ===== GRAND FINALE OVERLAY ===== -->
+    <div id="grandFinale" class="grand-finale">
+        <div class="finale-content">
+            <h1 class="finale-text">HAPPY ANNIVERSARY<br><span>My Love</span></h1>
+            <div class="finale-emoji" style="margin-bottom: 2rem;">❤️</div>
+            <button class="continue-btn" onclick="showUltimateFinale()">Continue 💝</button>
+        </div>
+        <button class="close-finale" onclick="closeGrandFinale()" title="Close">✖</button>
+    </div>
+
+    <!-- ===== ULTIMATE FINALE OVERLAY (ADITI) ===== -->
+    <div id="ultimateFinale" class="grand-finale ultimate-finale">
+        <div class="finale-content">
+            <h2 class="ultimate-subtext">I LOVE YOU</h2>
+            <div class="name-reveal">
+                <span class="letter" style="--delay: 1">A</span>
+                <span class="letter" style="--delay: 2">D</span>
+                <span class="letter" style="--delay: 3">I</span>
+                <span class="letter" style="--delay: 4">T</span>
+                <span class="letter" style="--delay: 5">I</span>
+            </div>
+            <div class="ultimate-emoji">💖</div>
+        </div>
+        <button class="close-finale" onclick="closeUltimateFinale()" title="Close">✖</button>
+    </div>
+
+    <!-- Firebase CDN -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database-compat.js"></script>
+    <script src="js/firebase-config.js?v=1"></script>
+    <script src="js/firebase-db.js?v=1"></script>
+
+    <script src="js/auth.js?v=1"></script>
+    <script src="js/slideshow.js?v=2"></script>
+    <script src="js/effects.js?v=2"></script>
+    <script src="js/music.js?v=2"></script>
+    <script src="js/animations.js?v=2"></script>
+    <script src="js/notes.js?v=1"></script>
+    <script src="js/edit-toggle.js?v=1"></script>
+</body>
+
+</html>

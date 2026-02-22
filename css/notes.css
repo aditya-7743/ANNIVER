@@ -1,0 +1,47 @@
+/* ==========================================
+   LIVE EDITING STYLES
+   ========================================== */
+
+[contenteditable="true"] {
+    outline: none;
+    transition: 0.3s;
+    border-radius: 8px;
+    cursor: text;
+    border: 1px border transparent;
+}
+
+[contenteditable="true"]:hover {
+    background: rgba(43, 21, 33, 0.3);
+    box-shadow: 0 0 10px rgba(255, 143, 171, 0.1);
+}
+
+[contenteditable="true"]:focus {
+    background: rgba(43, 21, 33, 0.6);
+    box-shadow: inset 0 0 10px rgba(255, 143, 171, 0.2);
+    border: 1px dashed rgba(232, 160, 191, 0.4);
+}
+
+.slide-note-footer {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    height: 20px;
+    z-index: 10;
+}
+
+.save-status {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 0.85rem;
+    color: var(--gold);
+    opacity: 0;
+    transition: opacity 0.5s;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    background: rgba(26, 11, 18, 0.6);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    border: 1px solid rgba(212, 165, 116, 0.3);
+}
+
+.save-status.show {
+    opacity: 1;
+}

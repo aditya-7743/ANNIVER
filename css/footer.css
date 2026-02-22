@@ -1,0 +1,68 @@
+/* ==========================================
+   FOOTER - Premium Romantic
+   ========================================== */
+
+.footer {
+  text-align: center;
+  padding: 5rem 2rem;
+  position: relative;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(199, 107, 143, 0.06) 0%, transparent 60%);
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--rose), var(--gold-light), var(--rose), transparent);
+}
+
+.footer-heart {
+  font-size: 3.5rem;
+  animation: heartbeat 1.5s ease-in-out infinite;
+  display: inline-block;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 0 20px rgba(255, 143, 171, 0.5));
+}
+
+.footer-text {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+  background: linear-gradient(135deg, var(--rose), var(--gold-light), var(--rose));
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: heroShimmer 5s ease-in-out infinite;
+}
+
+@keyframes heroShimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.footer-sub {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  color: rgba(232, 160, 191, 0.4);
+  margin-top: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.footer-sub:hover {
+  color: rgba(232, 160, 191, 0.7);
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>💕 Our Love Story</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Quicksand:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+
+  <!-- Modular CSS -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/splash.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/counter.css">
+  <link rel="stylesheet" href="css/memories.css">
+  <link rel="stylesheet" href="css/letter.css">
+  <link rel="stylesheet" href="css/timeline.css">
+  <link rel="stylesheet" href="css/effects.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+
+<body>
+
+  <!-- SPLASH SCREEN -->
+  <div class="splash-overlay" id="splash" onclick="startExperience()">
+    <div class="splash-heart-anim">💝</div>
+    <div class="splash-text">I made something for you...</div>
+    <div class="splash-tap">tap anywhere to open</div>
+  </div>
+
+  <!-- FLOATING HEARTS CONTAINER -->
+  <div class="floating-hearts" id="floatingHearts"></div>
+
+  <!-- MUSIC TOGGLE BUTTON -->
+  <button class="music-toggle" id="musicBtn" onclick="toggleMusic()" title="Toggle Music">
+    <div class="music-bars">
+      <div class="music-bar"></div>
+      <div class="music-bar"></div>
+      <div class="music-bar"></div>
+      <div class="music-bar"></div>
+    </div>
+  </button>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-heart">💕</div>
+      <h1>Our Love Story</h1>
+      <p class="hero-subtitle">every moment with you is a gift</p>
+    </div>
+    <div class="scroll-hint" onclick="document.querySelector('.counter-section').scrollIntoView({behavior:'smooth'})">↓
+    </div>
+  </section>
+
+  <!-- ===== DAYS TOGETHER COUNTER ===== -->
+  <section class="counter-section">
+    <div class="counter-label" data-animate>together for</div>
+    <div class="counter-grid">
+      <div class="counter-box" data-animate data-delay="100">
+        <div class="counter-number" id="cDays">0</div>
+        <div class="counter-unit">Days</div>
+      </div>
+      <div class="counter-box" data-animate data-delay="200">
+        <div class="counter-number" id="cHours">0</div>
+        <div class="counter-unit">Hours</div>
+      </div>
+      <div class="counter-box" data-animate data-delay="300">
+        <div class="counter-number" id="cMinutes">0</div>
+        <div class="counter-unit">Minutes</div>
+      </div>
+      <div class="counter-box" data-animate data-delay="400">
+        <div class="counter-number" id="cSeconds">0</div>
+        <div class="counter-unit">Seconds</div>
+      </div>
+    </div>
+    <div class="counter-message">...and counting every heartbeat 💗</div>
+  </section>
+
+  <!-- ===== MEMORIES BUTTON ===== -->
+  <section class="memories-section" style="padding: 2rem 0; min-height: auto;">
+    <div style="text-align: center;" data-animate>
+      <a href="memories.html" class="nav-link-btn">View Our Beautiful Memories ✨</a>
+    </div>
+  </section>
+
+  <!-- ===== TIMELINE BUTTON ===== -->
+  <section class="memories-section" style="padding: 2rem 0; min-height: auto;">
+    <div style="text-align: center;" data-animate>
+      <a href="timeline.html" class="nav-link-btn">View Our Journey Through Time ⏳</a>
+    </div>
+  </section>
+
+  <!-- ===== QUERIES BUTTON ===== -->
+  <section class="memories-section" style="padding: 2rem 0; min-height: auto;">
+    <div style="text-align: center;" data-animate>
+      <a href="queries.html" class="nav-link-btn">Queries - Dil Ki Baatein 💭</a>
+    </div>
+  </section>
+
+  <!-- ===== LOVE LETTER ===== -->
+  <section class="letter-section">
+    <div class="letter-envelope">
+      <div class="letter-paper" data-animate>
+        <div class="letter-greeting">My Dearest Love,</div>
+        <div class="letter-body">
+          <p>If I could hold every moment we've shared in my hands, I would keep them in a treasure chest close to my
+            heart. You are the most beautiful chapter of my life — one that I never want to end.</p>
+          <p>You make ordinary days feel extraordinary. Your laugh is my favorite sound, your smile is my favorite
+            sight, and being next to you is my favorite place in the entire world.</p>
+          <p>Thank you for choosing me. Thank you for loving me on the easy days and the hard ones. Thank you for being
+            my best friend, my comfort, and my home.</p>
+          <p>Today, as we celebrate another year of us, I want you to know — I would choose you again and again, in
+            every lifetime, without a single hesitation.</p>
+        </div>
+        <div class="letter-closing">
+          Forever & Always Yours <span class="heart-sig">💕</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <section class="footer">
+    <div class="footer-heart">💖</div>
+    <div class="footer-text">Here's to forever, my love</div>
+    <div class="footer-sub">made with love, just for you</div>
+  </section>
+
+  <!-- Firebase CDN -->
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database-compat.js"></script>
+  <script src="js/firebase-config.js?v=1"></script>
+  <script src="js/firebase-db.js?v=1"></script>
+
+  <!-- Modular JS -->
+  <script src="js/auth.js?v=1"></script>
+  <script src="js/config.js?v=2"></script>
+  <script src="js/counter.js?v=3"></script>
+  <script src="js/effects.js?v=2"></script>
+  <script src="js/music.js?v=2"></script>
+  <script src="js/animations.js?v=2"></script>
+  <script src="js/edit-toggle.js?v=1"></script>
+</body>
+
+</html>
