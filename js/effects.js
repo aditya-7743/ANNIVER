@@ -6,16 +6,6 @@
 function startExperience() {
   document.getElementById('splash').classList.add('hidden');
   createFloatingHearts();
-
-  // Go fullscreen (hide browser chrome)
-  const el = document.documentElement;
-  if (el.requestFullscreen) {
-    el.requestFullscreen().catch(() => { });
-  } else if (el.webkitRequestFullscreen) {
-    el.webkitRequestFullscreen();
-  } else if (el.msRequestFullscreen) {
-    el.msRequestFullscreen();
-  }
 }
 
 // ============ FLOATING HEARTS ============
