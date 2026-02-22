@@ -1,0 +1,428 @@
+/* ==========================================
+   QUERIES PAGE STYLES
+   ========================================== */
+
+.back-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    color: white;
+    text-decoration: none;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.1rem;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 8px 20px;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 15px rgba(255, 143, 171, 0.3);
+}
+
+/* ==========================================
+   INTRO SCREEN
+   ========================================== */
+.query-intro {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.intro-content {
+    text-align: center;
+    animation: fadeInUp 1s ease forwards;
+}
+
+.intro-emoji {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    animation: float 3s ease-in-out infinite;
+}
+
+.intro-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 4rem;
+    color: var(--primary-color);
+    text-shadow: 0 0 30px rgba(255, 143, 171, 0.5);
+    margin-bottom: 0.5rem;
+}
+
+.intro-subtitle {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.3rem;
+    color: var(--blush);
+    margin-bottom: 2.5rem;
+    opacity: 0.8;
+}
+
+.intro-warning {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 143, 171, 0.3);
+    border-radius: 20px;
+    padding: 2rem 3rem;
+    margin-bottom: 3rem;
+    backdrop-filter: blur(10px);
+}
+
+.intro-warning p {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.4rem;
+    color: var(--blush);
+    margin: 0.5rem 0;
+    letter-spacing: 1px;
+}
+
+.intro-warning .highlight {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--gold);
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+    margin: 1rem 0;
+}
+
+.lets-go-btn {
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    color: white;
+    border: none;
+    padding: 15px 45px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    border-radius: 30px;
+    box-shadow: 0 4px 20px rgba(255, 143, 171, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.lets-go-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 25px rgba(255, 143, 171, 0.8);
+}
+
+/* ==========================================
+   QUERY CONTAINER (Question Card)
+   ========================================== */
+.query-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    padding-top: 5rem;
+}
+
+/* Progress Bar */
+.query-progress {
+    width: 80%;
+    max-width: 600px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, var(--secondary-color), var(--primary-color), var(--gold));
+    border-radius: 10px;
+    transition: width 0.5s ease;
+}
+
+.progress-text {
+    font-family: 'Quicksand', sans-serif;
+    color: var(--blush);
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+    opacity: 0.7;
+}
+
+/* Question Card */
+.query-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 143, 171, 0.2);
+    border-radius: 24px;
+    padding: 3rem;
+    width: 90%;
+    max-width: 650px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    animation: slideIn 0.5s ease forwards;
+}
+
+.question-number {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.8rem;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+}
+
+.question-text {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.3rem;
+    color: var(--blush);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.answer-input {
+    width: 100%;
+    padding: 1.2rem;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 143, 171, 0.25);
+    border-radius: 15px;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    resize: vertical;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+.answer-input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 20px rgba(255, 143, 171, 0.2);
+}
+
+.answer-input::placeholder {
+    color: rgba(255, 255, 255, 0.35);
+    font-style: italic;
+}
+
+/* Navigation Buttons */
+.query-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.nav-btn {
+    padding: 10px 30px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 25px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.prev-btn {
+    background: transparent;
+    color: var(--blush);
+    border: 1px solid rgba(255, 143, 171, 0.3);
+}
+
+.prev-btn:hover {
+    background: rgba(255, 143, 171, 0.15);
+    box-shadow: 0 0 15px rgba(255, 143, 171, 0.2);
+}
+
+.next-btn {
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    color: white;
+    box-shadow: 0 4px 15px rgba(255, 143, 171, 0.4);
+}
+
+.next-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 143, 171, 0.7);
+}
+
+/* ==========================================
+   COMPLETION SCREEN
+   ========================================== */
+.query-complete {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.complete-content {
+    text-align: center;
+    animation: fadeInUp 1s ease forwards;
+}
+
+.complete-emoji {
+    font-size: 5rem;
+    margin-bottom: 1.5rem;
+}
+
+.complete-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3.5rem;
+    color: var(--primary-color);
+    text-shadow: 0 0 30px rgba(255, 143, 171, 0.5);
+    margin-bottom: 1rem;
+}
+
+.complete-text {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.2rem;
+    color: var(--blush);
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+}
+
+.complete-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ==========================================
+   REVIEW SCREEN
+   ========================================== */
+.query-review {
+    min-height: 100vh;
+    padding: 5rem 2rem 2rem;
+}
+
+.review-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 20px rgba(255, 143, 171, 0.4);
+}
+
+.review-list {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.review-item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 143, 171, 0.15);
+    border-radius: 18px;
+    padding: 1.5rem 2rem;
+    margin-bottom: 1.5rem;
+    backdrop-filter: blur(10px);
+}
+
+.review-question {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.05rem;
+    color: var(--gold);
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.review-answer {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.1rem;
+    color: var(--blush);
+    line-height: 1.6;
+    white-space: pre-wrap;
+    opacity: 0.9;
+}
+
+.review-answer.empty {
+    opacity: 0.4;
+    font-style: italic;
+}
+
+/* ==========================================
+   ANIMATIONS
+   ========================================== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+@media screen and (max-width: 768px) {
+    .intro-title {
+        font-size: 3rem;
+    }
+
+    .intro-warning {
+        padding: 1.5rem;
+    }
+
+    .intro-warning p {
+        font-size: 1.2rem;
+    }
+
+    .intro-warning .highlight {
+        font-size: 1.8rem;
+    }
+
+    .query-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .question-text {
+        font-size: 1.15rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .intro-title {
+        font-size: 2.5rem;
+    }
+
+    .intro-warning .highlight {
+        font-size: 1.5rem;
+    }
+
+    .query-card {
+        padding: 1.5rem 1rem;
+    }
+
+    .complete-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
